@@ -21,7 +21,7 @@
 
 # Api Url Examples:
   * http://localhost:8888/task/search?q=java -- Will fetch the results of 5 books and 5 albums. Default limit is 5.
-  * http://localhost:8888/task/search?q=java&limit=10 -- Will fetch the results of 10 books and 10 albums.
+  * http://localhost:8888/task/search?harry%20potter&limit=10 -- Will fetch the results of 10 books and 10 albums.
   
 # Steps to run this application from code:
   * Please refer the Example test class (src/test/java/com/manju/kramphub/task/KrampHubTaskRestTest.java) from this project.
