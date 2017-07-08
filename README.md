@@ -25,3 +25,14 @@
   
 # Steps to run this application from code:
   * Please refer the Example test class (src/test/java/com/manju/kramphub/task/KrampHubTaskRestTest.java) from this project.
+
+#  Application Metrics and Health Status:
+  * Use this url (http://localhost:8888/task/health) to get the health status of the application.
+  * Use this url (http://localhost:8888/task/metrics) to get the metrics of the application.
+  
+# Api Metrics and Health status:
+  * Response includes the api metrics and health status.
+  * Api Health Status Types:
+    * PROCESSED -- Api is processed successfully.
+    * PROCESSING_ERROR -- Api is not processed due to some exceptions/errors from the applie or google api's.
+    * PARTIALLY_PROCESSED -- Api is partially processed. Got the response but while processing some exceptions occured like response may not contain authors/artist name or title etc.,
