@@ -44,7 +44,7 @@ public class KrampHubTaskController {
 	@RequestMapping(value = "/search", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ApiOperation(value = "List of Kramp Hub Task response", notes = "List of Kramp Hub Task response for seach value", response = KrampHubTaskResponse.class, responseContainer = "List")
 	@ApiResponses({
-		@ApiResponse(code = 404, message = "Query term cannot be empty."),
+		@ApiResponse(code = 404, message = "Query Value cannot be empty."),
 		@ApiResponse(code = 405, message = "Request Method not supported"),
 		@ApiResponse(code = 500, message = "Internal Server while processing the request"),
 		@ApiResponse(code = 200, message = "Successfully processed the request", reference="{\"count\":2,\"taskResponses\":[{\"title\":\"Mr. Misunderstood\",\"personName\":\"Eric Church\",\"type\":\"ALBUM\"},{\"title\":\"Thesaurus of ERIC Descriptors\",\"personName\":\"[\\\"Educational Resources Information Center (U.S.)\\\",\\\"James E. Houston\\\"]\",\"type\":\"BOOK\"}],\"apiMetrics\":{\"apiStartTime\":\"2017-07-07T21:55:37+0530\",\"apiEndTime\":\"2017-07-07T21:55:38+0530\",\"apiCompleteTime\":\"1.247 Seconds\"}}")
