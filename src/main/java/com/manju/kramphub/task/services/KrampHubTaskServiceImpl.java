@@ -64,11 +64,13 @@ public class KrampHubTaskServiceImpl implements KrampHubTaskService {
 				else 
 					apiHealthStatus.setAppleApiStatus(ApiHealthStatusType.PROCESSING_ERROR);
 			}
+			int count = 0;
 			try {
+				count = resultList.size();
 				googleFuture.get(); //Waiting for the google search api request to complete.
 			} catch (InterruptedException | ExecutionException e) {
 				LOG.error("Error while calling the google books search callback. ", e);
-				if(resultList.size() > 0) 
+				if(resultList.size() > count) 
 					apiHealthStatus.setGoogleApiStatus(ApiHealthStatusType.PARTIALLY_PROCESSED);
 				else 
 					apiHealthStatus.setGoogleApiStatus(ApiHealthStatusType.PROCESSING_ERROR);
