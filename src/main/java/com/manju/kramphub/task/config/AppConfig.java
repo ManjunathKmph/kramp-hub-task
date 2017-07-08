@@ -26,7 +26,7 @@ public class AppConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.manju.spring.rest.swagger.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.manju.kramphub.task.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
@@ -34,8 +34,8 @@ public class AppConfig {
      
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring REST Sample with Swagger")
-                .description("Spring REST Sample with Swagger")
+                .title("Kramp Hub task with Swagger")
+                .description("Kramp Hub task Service Api")
                 .version("1.0")
                 .build();
     }
