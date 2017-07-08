@@ -43,7 +43,8 @@ public class KrampHubTaskServiceImpl implements KrampHubTaskService {
 	@Qualifier("appleITunesSearchApi")
 	private BaseSearchApi appleITunesSearchApi;
 	
-	private static final ExecutorService es  = Executors.newCachedThreadPool();
+	//Only one instance of executor service is created, since this class is singleton bean.
+	private final ExecutorService es  = Executors.newCachedThreadPool();
 
 	/* (non-Javadoc)
 	 * @see com.manju.kramphub.task.services.KrampHubTaskService#search(java.lang.String, int, com.manju.kramphub.task.model.HealthCheck)
